@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  countryList:string[] = ['India','America']
   title = 'basic-angular-app';
+
+  getCountryList():string{
+    return 'Hello'
+  }
+  
 }
