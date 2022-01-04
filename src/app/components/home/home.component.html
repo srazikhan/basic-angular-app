@@ -1,1 +1,11 @@
 <p>home works!</p>
+
+<h4>{{productList}}</h4>
+<h4>{{updatedProductList}}</h4>
+<h4>{{isActive ? 'Welcome to web':'Under development'}}</h4>
+<h4>{{message}}</h4>
+<h4>{{imageURL}}</h4>
+<h4>{{showMSG()}}</h4>
+<button type="button" (click)="showImage()">show image</button><br>
+
+<img [src]="imageURL" [title]="message" style="width: 300px;height: 300px;">
