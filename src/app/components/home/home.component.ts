@@ -21,11 +21,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {}
 
   showImage(){
-    alert('clicked')
     this.imageURL = 'https://static.digit.in/product/284c81498a93a82db7b5db6600494c20bee4f18e.jpeg';
     this.productList.push('Nazeer');
     this.productList.push('Javascript');
-    console.log(this.productList)
     this.updatedProductList = this.productList;
   }
 

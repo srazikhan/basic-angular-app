@@ -11,6 +11,7 @@ import { EmployeesListComponent } from './components/employees-list/employees-li
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { CustomersListComponent } from './components/customers-list/customers-list.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],//Optional
   exports:[],//Optional
