@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
   productList:string[] = ['Apple','Mango','Orange'];
   updatedProductList:string[] = [];
   isActive:boolean = true;
+  isDisplay:boolean = false
   message:string = 'Hi I am angular developer'
   imageURL:string = '';
 
@@ -25,6 +26,7 @@ export class HomeComponent implements OnInit {
     this.productList.push('Nazeer');
     this.productList.push('Javascript');
     this.updatedProductList = this.productList;
+    this.isDisplay = true;
   }
 
   showMSG(){

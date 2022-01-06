@@ -7,4 +7,4 @@
 <h4>{{imageURL}}</h4>
 <button type="button" (click)="showImage()">show image</button><br>
 
-<img [src]="imageURL" [title]="message" style="width: 300px;height: 300px;">
+<img [src]="imageURL" *ngIf="isDisplay" [title]="message" style="width: 300px;height: 300px;">
