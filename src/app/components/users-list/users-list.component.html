@@ -27,4 +27,16 @@
     <div *ngSwitchDefault>Sorry condition is not matched</div>
   </div>
 {{isActive}}
-  <h3 [ngClass]="{'active':isActive,'InActive':isActive}">Welcome</h3>
+
+<!-- color:red,
+font-size:20px
+
+var myStyle = {'font-size':'20px','color':'red'} -->
+
+  <h3 [ngStyle]="{'color':'red','font-size':'20px'}">Hi i am using [ngStyle]</h3>
+  <h3 [ngClass]="{'demo-class1 demo-class2 demo-class3':true}">Hi How are you i am using [ngClass]</h3>
+  <h3 [ngClass]="{'active':isActive,'InActive':!isActive}">Hi How are you i am using [ngClass]</h3>
+
+  <h3 [class.active]="true">i am  [class] binding</h3>
+  <h3 [style.color]="isActive ? 'green':'red'" [attr.myData]="'i am learning angular'">i am  [style] binding</h3>
+  

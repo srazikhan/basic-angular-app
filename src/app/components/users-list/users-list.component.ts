@@ -15,6 +15,15 @@ export class UsersListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    let userObj:myInterface ={
+      id:12,
+      name:'sajjad'
+    }
   }
 
 }
+
+export interface myInterface{
+  id:number,
+  name:string,
+} 
