@@ -12,6 +12,7 @@ import { UsersListComponent } from './components/users-list/users-list.component
 import { CustomersListComponent } from './components/customers-list/customers-list.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FormsModule } from '@angular/forms';
+import { MyUpperPipe } from './core/pipes/my-upper.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     EmployeesListComponent,
     UsersListComponent,
     CustomersListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    MyUpperPipe
   ],
   imports: [
     BrowserModule,

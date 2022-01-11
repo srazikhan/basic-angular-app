@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { commonNameSpace } from 'src/app/core/namespaces/commonNameSpace';
+import { action } from 'src/app/core/enums/my-enum';
+import { userI } from 'src/app/core/interfaces/userInterface';
 
 @Component({
   selector: 'app-users-list',
@@ -12,10 +14,12 @@ export class UsersListComponent implements OnInit {
   countryList:string[] = commonNameSpace.countryList;
   userActivationStatus:boolean = false;
   isActive:boolean = false;
+  action:any = action.add;
+
   constructor() { }
 
   ngOnInit(): void {
-    let userObj:myInterface ={
+    let userObj:userI ={
       id:12,
       name:'sajjad'
     }
@@ -23,7 +27,7 @@ export class UsersListComponent implements OnInit {
 
 }
 
-export interface myInterface{
-  id:number,
-  name:string,
-} 
+// export interface myInterface{
+//   id:number,
+//   name:string,
+// } 

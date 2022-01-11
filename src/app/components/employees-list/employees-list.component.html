@@ -1,4 +1,14 @@
 <p>employees-list works!</p>
 <input type="text" [(ngModel)]="userName">
 <br><br>
-{{userName}}
+{{userName | uppercase}}
+<h4>{{myemail | titlecase}}</h4>
+<h4>{{myemail | uppercase}}</h4>
+<h4>{{myemail | lowercase}}</h4>
+<h4>{{myemail | slice:0:7 | uppercase}}</h4>
+<h4>{{userObj | json}}</h4>
+<h4>{{currentDate}}</h4>
+<h4>{{currentDate | date:'dd-MM-yyyy'}}</h4>
+<h4>{{currentDate | date:'short'}}</h4>
+<h4>{{count | async }}</h4>
+<h4>{{myemail | myUpper }}</h4>
