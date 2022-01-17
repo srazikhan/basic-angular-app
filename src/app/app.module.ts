@@ -13,6 +13,7 @@ import { CustomersListComponent } from './components/customers-list/customers-li
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FormsModule } from '@angular/forms';
 import { MyUpperPipe } from './core/pipes/my-upper.pipe';
+import { UserService } from './core/services/user.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { MyUpperPipe } from './core/pipes/my-upper.pipe';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],//Optional
+  // providers: [UserService],// used for adding services
   exports:[],//Optional
   bootstrap: [AppComponent]
 })

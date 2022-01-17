@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { interval, Observable } from 'rxjs';
+import { UserService } from 'src/app/core/services/user.service';
 
 @Component({
   selector: 'app-employees-list',
@@ -12,7 +13,10 @@ export class EmployeesListComponent implements OnInit {
   userObj:Object = {id:123,name:'sajjad',email:'sajjad@gmail.com'};
   count!:Observable<any>;
   currentDate:Date = new Date();
-  constructor() { }
+  userList:any;
+  constructor(private userService:UserService) {
+    this.userList = this.userService.getUserList();
+  }
 
   ngOnInit(): void {
     this.count = interval(1000);
