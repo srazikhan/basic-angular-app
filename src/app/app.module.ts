@@ -14,6 +14,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { FormsModule } from '@angular/forms';
 import { MyUpperPipe } from './core/pipes/my-upper.pipe';
 import { UserService } from './core/services/user.service';
+import { ParentComponent } from './components/Component-Interaction/parent/parent.component';
+import { ChildComponent } from './components/Component-Interaction/child/child.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { UserService } from './core/services/user.service';
     UsersListComponent,
     CustomersListComponent,
     PageNotFoundComponent,
-    MyUpperPipe
+    MyUpperPipe,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

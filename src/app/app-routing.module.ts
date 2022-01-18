@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ParentComponent } from './components/Component-Interaction/parent/parent.component';
 import { CustomersListComponent } from './components/customers-list/customers-list.component';
 import { EmployeesListComponent } from './components/employees-list/employees-list.component';
 import { HomeComponent } from './components/home/home.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'customers',component:CustomersListComponent},
   {path:'users',component:UsersListComponent},
   {path:'employees',component:EmployeesListComponent},
+  {path:'component-interaction',component:ParentComponent},
   {path:'**',component:PageNotFoundComponent},
 ];
 
