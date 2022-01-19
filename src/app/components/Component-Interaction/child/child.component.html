@@ -1,2 +1,5 @@
 <p>child works!</p>
 {{myMSG}}
+<br>
+<input type="text" #myInput>
+<button type="button" (click)="sendData(myInput.value)">Sent data to parent</button>

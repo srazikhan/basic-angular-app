@@ -2,9 +2,10 @@
 <div style="width: 100%;height: 200px;background-color: gray;margin-bottom: 20px;">
     <p>parent works!</p>
     {{message}}
+    <h3>{{dataFromChild}}</h3>
 </div>
 
 
 <div style="width: 100%;height: 200px;background-color: gray;">
-    <app-child [myMSG]="message"></app-child>
+    <app-child [myMSG]="message" (messageFromChild)="receiveData($event)"></app-child>
 </div>
