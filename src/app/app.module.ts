@@ -16,6 +16,7 @@ import { MyUpperPipe } from './core/pipes/my-upper.pipe';
 import { UserService } from './core/services/user.service';
 import { ParentComponent } from './components/Component-Interaction/parent/parent.component';
 import { ChildComponent } from './components/Component-Interaction/child/child.component';
+import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ChildComponent } from './components/Component-Interaction/child/child.c
     PageNotFoundComponent,
     MyUpperPipe,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    CustomerDetailsComponent
   ],
   imports: [
     BrowserModule,
