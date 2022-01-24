@@ -14,19 +14,25 @@
         <th scope="row">123</th>
         <td>HTML</td>
         <td>Otto</td>
-        <td><button type="button" class="btn btn-primary" routerLink="/customer-details/123/HTML">View Details</button></td>
+        <td><button type="button" class="btn btn-primary" routerLink="/customers/customer-details/123/HTML">View Details</button></td>
       </tr>
       <tr>
         <th scope="row">1234</th>
         <td>javascript</td>
         <td>Thornton</td>
-        <td><button type="button" class="btn btn-primary" routerLink="/customer-details/1234/javascript">View Details</button></td>
+        <td><button type="button" class="btn btn-primary" routerLink="/customers/customer-details/1234/javascript">View Details</button></td>
       </tr>
       <tr>
         <th scope="row">321</th>
         <td>javascript Query Param</td>
         <td>Thornton</td>
         <td><button type="button" class="btn btn-primary" [routerLink]="['/employees']" [queryParams]="{ customerId: '1234567',customerName:'Sajjad'}">View Details</button></td>
+      </tr>
+      <tr>
+        <th scope="row">321</th>
+        <td>Navigate to Home Page</td>
+        <td>Thornton</td>
+        <td><button type="button" class="btn btn-primary" (click)="goToHome()" >View Details</button></td>
       </tr>
    
     </tbody>

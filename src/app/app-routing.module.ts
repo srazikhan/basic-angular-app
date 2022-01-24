@@ -13,8 +13,10 @@ const routes: Routes = [
   {path:'', redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
   {path:'products',component:ProductsComponent},
-  {path:'customers',component:CustomersListComponent},
-  {path:'customer-details/:customerId/:customerName',component:CustomerDetailsComponent},
+  {path:'customers', children:[
+    {path:'',component:CustomersListComponent},
+    {path:'customer-details/:customerId/:customerName',component:CustomerDetailsComponent},
+  ]},
   {path:'users',component:UsersListComponent},
   {path:'employees',component:EmployeesListComponent},
   {path:'component-interaction',component:ParentComponent},
