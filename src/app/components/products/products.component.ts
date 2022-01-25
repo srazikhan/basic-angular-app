@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
   productList:string[] =['laptop','computer'];
-  isShow:boolean = false;
+  isShow:boolean = true;
   constructor() { }
 
   ngOnInit(): void {
