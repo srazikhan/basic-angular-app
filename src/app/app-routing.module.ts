@@ -9,12 +9,13 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ProductsComponent } from './components/products/products.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { AuthGuard } from './core/guards/auth.guard';
+import { ChildAuthGuard } from './core/guards/child-auth.guard';
 
 const routes: Routes = [
   {path:'', redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
   {path:'products',component:ProductsComponent, canActivate:[AuthGuard]},
-  {path:'customers', children:[
+  {path:'customers', canActivateChild:[ChildAuthGuard], children:[
     {path:'',component:CustomersListComponent},
     {path:'customer-details/:customerId/:customerName',component:CustomerDetailsComponent},
   ]},
