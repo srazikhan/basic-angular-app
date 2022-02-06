@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 // @Injectable()
 @Injectable({
@@ -6,6 +7,8 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
   userList:any[] =[];
+  // myVote = new Subject<any>();
+  myVote = new BehaviorSubject<any>(null);
   constructor() { 
     this.userList = [
       {id:1,name:"sajjad",email:"sajjad@gmail.com"},
@@ -17,6 +20,12 @@ export class UserService {
 
   getUserList(){
     return this.userList;
+  }
+  setSubject(data:any){
+    this.myVote.next(data);
+  }
+  getSubject():Observable<any>{
+   return this.myVote.asObservable();
   }
   
 }
