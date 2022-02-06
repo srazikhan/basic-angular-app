@@ -20,6 +20,8 @@ import { CustomerDetailsComponent } from './components/customer-details/customer
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ObservableExamplesComponent } from './components/observable-examples/observable-examples.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiIntegrationComponent } from './components/api-integration/api-integration.component';
 
 @NgModule({
   declarations: [
@@ -38,13 +40,15 @@ import { ObservableExamplesComponent } from './components/observable-examples/ob
     CustomerDetailsComponent,
     LoginComponent,
     SignUpComponent,
-    ObservableExamplesComponent
+    ObservableExamplesComponent,
+    ApiIntegrationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   // providers: [UserService],// used for adding services
   exports:[],//Optional

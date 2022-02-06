@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ApiIntegrationComponent } from './components/api-integration/api-integration.component';
 import { ParentComponent } from './components/Component-Interaction/parent/parent.component';
 import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
 import { CustomersListComponent } from './components/customers-list/customers-list.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'sign-up',component:SignUpComponent},
   {path:'obs',component:ObservableExamplesComponent},
+  {path:'api-integration',component:ApiIntegrationComponent},
   {path:'products',component:ProductsComponent, canActivate:[AuthGuard]},
   {path:'customers', canActivateChild:[ChildAuthGuard], children:[
     {path:'',component:CustomersListComponent},

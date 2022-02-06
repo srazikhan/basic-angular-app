@@ -10,7 +10,9 @@ import { UserService } from 'src/app/core/services/user.service';
 })
 export class ObservableExamplesComponent implements OnInit {
 
-  
+  //myObservable:Observable<any> = of(1,2,3,4,5);
+  myObservable:Observable<any> = interval(1000);
+
   constructor(private userService:UserService) {
     
     this.userService.getSubject().subscribe((res:any)=>{
