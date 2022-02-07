@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MyApiService } from 'src/app/core/services/my-api.service';
 
 @Component({
   selector: 'app-api-integration',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApiIntegrationComponent implements OnInit {
   userList: any;
-  constructor(private httpClient: HttpClient) { }
+  constructor(private myapi:MyApiService) { }
 
   ngOnInit(): void {
     this.getUser();
@@ -21,11 +22,34 @@ export class ApiIntegrationComponent implements OnInit {
     //    console.log(res)
     //  })
 
-    this.httpClient.get('https://reqres.in/api/users?page=2', {}).subscribe((res: any) => {
+   this.myapi.getData().subscribe((res: any) => {
       console.log(res.data);
       this.userList = res.data;
-    })
+    });
 
+  }
+  deleteUser(userId:number){
+    console.log(userId)
+    if(confirm('Are you sure want to delete this record?')){
+      this.myapi.deleteData(userId).subscribe((res:any)=>{
+        console.log(res)
+      })
+    }
+  }
+  updateUser(userObj:any){
+    console.log(userObj)
+    this.myapi.updateData(userObj).subscribe((res:any)=>{
+      console.log(res)
+    })
+  }
+  createUser(){
+    const payload:any = {
+      name: "morpheus",
+      job: "leader"
+    }
+    this.myapi.createData(payload).subscribe((res:any)=>{
+      console.log(res)
+    })
   }
 
 }
