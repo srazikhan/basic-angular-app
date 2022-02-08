@@ -20,8 +20,9 @@ import { CustomerDetailsComponent } from './components/customer-details/customer
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ObservableExamplesComponent } from './components/observable-examples/observable-examples.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ApiIntegrationComponent } from './components/api-integration/api-integration.component';
+import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,13 @@ import { ApiIntegrationComponent } from './components/api-integration/api-integr
   ],
   // providers: [UserService],// used for adding services
   exports:[],//Optional
+  providers:[
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 

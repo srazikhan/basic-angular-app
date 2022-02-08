@@ -1,11 +1,12 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MyApiService } from 'src/app/core/services/my-api.service';
 
 @Component({
   selector: 'app-api-integration',
   templateUrl: './api-integration.component.html',
-  styleUrls: ['./api-integration.component.css']
+  styleUrls: ['./api-integration.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ApiIntegrationComponent implements OnInit {
   userList: any;
