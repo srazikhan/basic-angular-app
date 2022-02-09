@@ -23,7 +23,8 @@ import { ObservableExamplesComponent } from './components/observable-examples/ob
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ApiIntegrationComponent } from './components/api-integration/api-integration.component';
 import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,9 @@ import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   // providers: [UserService],// used for adding services
   exports:[],//Optional
